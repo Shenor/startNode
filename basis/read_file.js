@@ -8,9 +8,11 @@ function getValue(flag) {
 
 const fileName = getValue('-f');
 
-fs.readFile(fileName, 'utf-8', (error, data) => {
-    if(error) return console.log("Данного файла не существует");;
 
+fs.readFile(`./${fileName}`, 'utf-8', (error, data) => {
+    if(error) return console.log("Данного файла не существует");;   
+
+  
     console.log(data);
     console.log(process.argv);
 });
